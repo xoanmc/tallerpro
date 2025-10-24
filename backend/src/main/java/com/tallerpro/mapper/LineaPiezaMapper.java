@@ -1,4 +1,4 @@
-package com.tallerpro.api.mapper;
+package com.tallerpro.mapper;
 
 import com.tallerpro.api.dto.orden.LineaPiezaCreateRequest;
 import com.tallerpro.api.dto.orden.LineaPiezaResponse;
@@ -9,6 +9,7 @@ import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 
 import java.math.BigDecimal;
+import java.util.List;
 
 @Mapper(componentModel = "spring")
 public interface LineaPiezaMapper {
@@ -23,6 +24,8 @@ public interface LineaPiezaMapper {
             expression = "java( entity.getPrecioUnitario() != null ? entity.getPrecioUnitario().multiply(java.math.BigDecimal.valueOf(entity.getCantidad())) : java.math.BigDecimal.ZERO )"
     )
     LineaPiezaResponse toResponse(LineaPieza entity);
+
+    List<LineaPiezaResponse> toResponseList(List<LineaPieza> entities);
 
     // Helpers: referencias por id
     default OrdenTrabajo ordenFromId(Long id) {
