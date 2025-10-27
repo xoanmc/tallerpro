@@ -5,7 +5,7 @@ import com.tallerpro.api.dto.orden.OrdenTrabajoResponse;
 import com.tallerpro.domain.EstadoOrden;
 import com.tallerpro.domain.OrdenTrabajo;
 import com.tallerpro.domain.Vehiculo;
-import com.tallerpro.api.mapper.LineaPiezaMapper;
+import com.tallerpro.mapper.LineaPiezaMapper;
 import org.mapstruct.*;
 
 import java.time.LocalDateTime;
