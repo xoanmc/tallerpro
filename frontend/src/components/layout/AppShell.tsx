@@ -1,7 +1,6 @@
-// src/components/layout/AppShell.tsx
 import React from 'react';
-import { Header } from './components/layout/Header';
-import { Sidebar } from './components/layout/Sidebar';
+import { Header } from './Header';
+import { Sidebar } from './Sidebar';
 
 export function AppShell({ children }: { children: React.ReactNode }) {
   // Estos estados los pide el Header del diseño Figma
